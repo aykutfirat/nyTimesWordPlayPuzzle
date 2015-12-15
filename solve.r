@@ -1,15 +1,15 @@
-with(my<-list(title=unique(tolower(strsplit(‘HowTheLowlyCyborgsWon’,”)[[1]])),
-story=lapply(strsplit(c(‘OhGoshShowCogsHow’,
-‘WhenTheChosenOneChewsGhostlyCowHerb’,
-‘HogsGown’,’BlottyBony’,’GelLegCore’,
-‘RetoolBetter’,’SnobbyBoots’,
-‘HerRococoEgo’,’TrollRobotry’,
-‘RebelCoercer’,’EchoHogWoe’,’WhySonWhy’,
-‘StonyTownsSoonSwoon’),”),
+with(my<-list(title=unique(tolower(strsplit('HowTheLowlyCyborgsWon','')[[1]])),
+story=lapply(strsplit(c('OhGoshShowCogsHow',
+'WhenTheChosenOneChewsGhostlyCowHerb',
+'HogsGown','BlottyBony','GelLegCore',
+'RetoolBetter','SnobbyBoots',
+'HerRococoEgo','TrollRobotry',
+'RebelCoercer','EchoHogWoe','WhySonWhy',
+'StonyTownsSoonSwoon'),''),
  function(y) unique(tolower(y)))),
- z<-lapply(strsplit(grep(‘([technologybeclothescogwheeler])\\1′,
- grep(‘^[chewcowherbstrongly]{6}$’,
- readLines(‘/usr/share/dict/words’),value=T),value=T),”),
- function(x,y=x) if(length(x)==1) return(T) else
+ z<-lapply(strsplit(grep('([technologybeclothescogwheel])\\1',
+ grep('^[chewcowherbstrongly]{6}$',
+ readLines('/usr/share/dict/words'),value=T),value=T),''),
+ function(x,y=x) if(length(x)==1) return(T) else 
  return(ifelse(x[2] %in% my$story[[match(x[1],my$title)]] & sys.function(0)(x[-1],y=x),
- ifelse(length(x)==length(y),print(paste(x,collapse=”)),T),F))))
+ ifelse(length(x)==length(y),print(paste(x,collapse='')),T),F))))
